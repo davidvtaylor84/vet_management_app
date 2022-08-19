@@ -9,3 +9,7 @@ def save(vet):
     results = run_sql(sql, values)
     vet.id = results[0] ['id']
     return vet
+
+def delete_all():
+    sql = "DELETE  FROM vets"
+    run_sql(sql)

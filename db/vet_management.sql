@@ -13,7 +13,6 @@ CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     pet_name VARCHAR(255),
     pet_type VARCHAR(255),
-    owner_name VARCHAR(255),
     owner_contact VARCHAR(255)
-    vet_id INT REFERENCES vets(id) ON DELETE CASCADE
+    vet_id INT REFERENCES vets(id) 
 );
