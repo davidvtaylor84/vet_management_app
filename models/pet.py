@@ -1,4 +1,4 @@
-class Pets:
+class Pet:
 
     def __init__(self, pet_name, date_of_birth, pet_type, breed, pet_owner, treatment_notes, vet, id = None):
         self.pet_name = pet_name

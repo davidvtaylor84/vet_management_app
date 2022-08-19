@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 
-from models.pet import Pets
-from models.vet import Vets
+from models.pet import Pet
+from models.vet import Vet
 
 import repositories.vet_repository as vet_repository
 

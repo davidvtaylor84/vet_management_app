@@ -1,4 +1,4 @@
-class Vets:
+class Vet:
 
     def __init__(self, firstname, surname, email, phone, id = None):
         self.firstname = firstname
