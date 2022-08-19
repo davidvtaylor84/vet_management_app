@@ -14,10 +14,12 @@ vet_repository.save(vet2)
 vet3 = Vets('Catalie', 'Portman', 'claws_and_effect@pardontheinterrufftion.com', '07892 7899 728')
 vet_repository.save(vet3)
 
-pet1 = Pets('Captain Purrcard', 'Persian Cat', 'Mike Rophone', vet3)
+pet1 = Pets('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', 'Mike Rophone', 'Bit of a sore leg', vet3)
 pet_repository.save(pet1)
-pet2 = Pets('Karl Barx', 'Irish Wolfhound', 'Helen Hywater', vet2)
+pet2 = Pets('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', 'Helen Hywater', 'Listless and depressed', vet2)
 pet_repository.save(pet2)
-pet3 = Pets('Ham the man')
+
+
+
 
 
