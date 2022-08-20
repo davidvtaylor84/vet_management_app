@@ -28,7 +28,7 @@ def select(id):
     sql = "SELECT * FROM vets WHERE id = %s"
     values = [id]
     results = run_sql(sql, values)
-
+    
     if results:
         result = results[0]
         vet = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])

@@ -27,12 +27,14 @@ def select_all():
 
 def select(id):
     pet = None
-    sql ="SELECT * FROM pets WHERE id is %s"
+    sql = "SELECT * FROM pets WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values) [0]
-    if result is not None:
+    results = run_sql(sql, values) 
+
+    if results:
+        result = results[0]
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet)
+        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet, result['id'])
     return pet
 
 

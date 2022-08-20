@@ -13,10 +13,10 @@ def pets():
     pets_list = pet_repository.select_all()
     return render_template("pets/index.html", pets = pets_list)
 
-@pets_blueprint.route("/pets/<int:id>", methods = ['GET'])
+@pets_blueprint.route("/pets/<id>", methods = ['GET'])
 def get_pet(id):
-    pet_object = pet_repository.select(id)
-    return render_template("/pets/show.html", pet = pet_object)
+    pet = pet_repository.select(id)
+    return render_template("/pets/show.html", pet = pet)
 
 
     
