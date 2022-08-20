@@ -27,9 +27,10 @@ def select(id):
     vet = None
     sql = "SELECT * FROM vets WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
+    results = run_sql(sql, values)
 
-    if result is not None:
+    if results:
+        result = results[0]
         vet = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])
     return vet
 

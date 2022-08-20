@@ -20,7 +20,7 @@ def select_all():
 
     for result in results:
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet)
+        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet, result['id'])
         pets.append(pet)
     return pets
 

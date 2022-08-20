@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pets and Treatment Notes</h1>
+    {% for pet in pets %}
+    <li>
+        <p>{{ pet.pet_name }}</p>
+        <p>Type: {{ pet.pet_type }}</p>
+        <p> DOB: {{ pet.date_of_birth }}</p>
+        <p>Owner: {{pet.pet_owner}}</p>
+    </li>
+    {% endfor %}
+</body>
+</html>
+
+{% endblock %}
