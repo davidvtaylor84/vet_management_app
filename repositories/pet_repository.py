@@ -29,11 +29,12 @@ def select(id):
     pet = None
     sql ="SELECT * FROM pets WHERE id is %s"
     values = [id]
-    result = run_sql(sql, values)
+    result = run_sql(sql, values) [0]
     if result is not None:
         vet = vet_repository.select(result['vet_id'])
         pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet)
     return pet
+
 
 def delete_all():
     sql = "DELETE  FROM pets"

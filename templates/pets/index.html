@@ -14,7 +14,7 @@
     <h1>Pets and Treatment Notes</h1>
     {% for pet in pets %}
     <li>
-        <p>{{ pet.pet_name }}</p>
+        <a href="/pets/{{pet.id}}">{{ pet.pet_name }}</a>
         <p>Type: {{ pet.pet_type }}</p>
         <p> DOB: {{ pet.date_of_birth }}</p>
         <p>Owner: {{pet.pet_owner}}</p>
@@ -24,3 +24,4 @@
 </html>
 
 {% endblock %}
+
