@@ -18,8 +18,8 @@ def select_all():
     results = run_sql(sql)
 
     for result in results:
-        vets = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])
-        vets.append(vets)
+        vet = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])
+        vets.append(vet)
     return vets
 
 
@@ -32,7 +32,7 @@ def select(id):
     if result is not None:
         vet = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])
     return vet
-    
+
 
 def delete_all():
     sql = "DELETE  FROM vets"
