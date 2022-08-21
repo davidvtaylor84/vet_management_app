@@ -6,27 +6,27 @@
 <form action="/pets/{{pet.id}}" method="post">
     <div>
         <label for="pet_name">Pet Name:</label>
-        <input type="text" name = pet_name value = {{pet.pet_name}}> 
+        <input type="text" name = pet_name value = "{{pet.pet_name}}" required> 
     </div>
 
     <div>
         <label for="date_of_birth">Date of birth:</label>
-        <input type="text" name = date_of_birth value = {{date_of_birth}}>
+        <input type="text" name = date_of_birth value = "{{pet.date_of_birth}}">
     </div>    
 
     <div>
         <label for="pet_type">Type:</label>
-        <input type="text" name=pet_type value = {{pet_type}}>
+        <input type="text" name=pet_type value = "{{pet.pet_type}}">
     </div>
 
     <div>
         <label for="breed">Breed:</label>
-        <input type="text" name = breed value = {{breed}}> 
+        <input type="text" name = breed value = "{{pet.breed}}"> 
     </div>
 
     <div>
         <label for="pet_owner">Owner:</label> 
-        <input type="text" name = pet_owner value = {{pet_owner}}>
+        <input type="text" name = pet_owner value = "{{pet.pet_owner}}">
     </div>
 
 
@@ -34,18 +34,23 @@
         <label for="vet_id">Vet:</label>
         <select name="vet_id" value = {{vet_id}}>
         {% for vet in vets %}
-        <option value="{{ vet.id }}">{{ vet.firstname }} {{ vet.surname }}</option>
+        <option value= "{{ vet.id }}">{{ vet.firstname }} {{ vet.surname }}</option>
         {% endfor %}
         </select>
     </div>
   
     <div>
         <label for="treatment_notes">Treatment Notes</label> <br>
-        <textarea name="treatment_notes" id= {{treatment_notes}} cols="30" rows="10"></textarea>
+        <textarea name="treatment_notes" value = "{{pet.treatment_notes}}" cols="30" rows="10">{{pet.treatment_notes}}</textarea>
     </div>
     
     <button type="submit">Update Details</button>
 
 </form>
+
+<form class="delete-form" action="/pets/{{pet.id}}/delete" method="POST">
+    <button type="submit">DELETE</button>
+</form>
+
 
 {% endblock %}
