@@ -39,22 +39,13 @@ def get_owner(id):
 def new_owner():
     return render_template ("/owners/new.html")
 
-# @pets_blueprint.route('/pets/new', methods = ['POST'])
-# def create_new_pet():
-#     pet_name = request.form['pet_name']
-#     date_of_birth = request.form ['date_of_birth']
-#     pet_type = request.form['pet_type']
-#     breed = request.form['breed']
-#     owner_id = request.form['owner_id']
-#     vet_id = request.form['vet_id']
-#     treatment_notes = request.form['treatment_notes']
-#     owner = owner_repository.select(owner_id)
-#     vet = vet_repository.select(vet_id)
-#     pet = Pet(pet_name, date_of_birth, pet_type, breed, owner, treatment_notes, vet)
-#     pet_repository.save(pet)
-#     return redirect('/pets')
-
-# @pets_blueprint.route("/pets/<id>/delete", methods = ['POST'])
-# def delete_pet(id):
-#     pet_repository.delete(id)
-#     return redirect('/pets')
+@owners_blueprint.route('/owners/new', methods = ['POST'])
+def create_new_pet():
+    owner_firstname = request.form['owner_firstname']
+    owner_surname = request.form['owner_surname']
+    owner_address = request.form['owner_address']
+    owner_email = request.form['owner_email']
+    owner_phone = request.form['owner_phone']
+    owner = Owner(owner_firstname, owner_surname, owner_address, owner_email, owner_phone)
+    owner_repository.save(owner)
+    return redirect('/pets')
