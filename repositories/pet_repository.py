@@ -6,7 +6,7 @@ from models.vet import Vet
 import repositories.vet_repository as vet_repository
 
 def save(pet):
-    sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, breed,pet_owner, treatment_notes) VALUES (%s, %s, %s, %s, %s, %s, %s)returning id"
+    sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, breed,pet_owner, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s)returning id"
     values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.pet_owner, pet.treatment_notes, pet.vet.id]
     results = run_sql(sql, values)
     pet.id = results [0]['id']
