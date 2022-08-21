@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>Name: {{ owner.owner_firstname }} {{owner.owner_surname}}</p>
+    <p>Address: {{owner.owner_address }}</p>
+    <p>Phone: {{ owner.owner_phone }}</p>
+    <p>e-mail: {{ owner.owner_email }}</p>
+  </div>
+
+{% endblock %}
+

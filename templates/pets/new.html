@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Add a patient</h1>
+<p>If owner is not currently registered, please fill in form: <a href="/owners/new"><button>Register Client</button></a></p>
+
+<h1>Add a pet</h1>
 
 <form action="/pets/new" method="post">
     

@@ -14,8 +14,8 @@
     <h1>Pets and Treatment Notes</h1>
     {% for pet in pets %}
     <li>
-        <p><a href="/pets/{{pet.id}}">{{ pet.pet_name }}</a></p>
-        <p><a href="">Owner: {{pet.owner.owner_firstname}} {{pet.owner.owner_surname}}</a></p>
+        <p><a href="/pets/{{pet.id}}">Patient Name:{{ pet.pet_name }}</a></p>
+        <p><a href="/owners/{{pet.owner.id}}">Owner: {{pet.owner.owner_firstname}} {{pet.owner.owner_surname}}</a></p>
         <p>Type: {{ pet.pet_type }}</p>
         <p> DOB: {{ pet.date_of_birth }}</p>
     </li><br><br>
