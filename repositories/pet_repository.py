@@ -33,7 +33,7 @@ def select(id):
     if results:
         result = results[0]
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet)
+        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet, result['id'])
     return pet
 
 
@@ -41,7 +41,10 @@ def delete_all():
     sql = "DELETE  FROM pets"
     run_sql(sql)
 
+def delete(id):
+    sql = "DELETE FROM pets WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
-
-
-
+# def update(pet):
+#     sql = "UPDATE pets SET(pet_name, date_of_birth, pet_type, breed, pet_owner, "
