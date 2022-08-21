@@ -8,8 +8,8 @@ import repositories.vet_repository as vet_repository
 import repositories.owner_repository as owner_repository
 
 def save(pet):
-    sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, breed,pet_owner, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s)returning id"
-    values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.pet_owner, pet.treatment_notes, pet.vet.id]
+    sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, breed, owner_id, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s)returning id"
+    values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.owner.id, pet.treatment_notes, pet.vet.id]
     results = run_sql(sql, values)
     pet.id = results [0]['id']
     return pet
@@ -20,8 +20,9 @@ def select_all():
     results = run_sql(sql)
 
     for result in results:
+        owner = owner_repository.select(result['owner_id'])
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet, result['id'])
+        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], owner, result['treatment_notes'], vet, result['id'])
         pets.append(pet)
     return pets
 
@@ -34,8 +35,9 @@ def select(id):
 
     if results:
         result = results[0]
+        owner = owner_repository.select(result['owner_id'])
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], result['pet_owner'], result['treatment_notes'], vet, result['id'])
+        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], owner, result['treatment_notes'], vet, result['id'])
     return pet
 
 
@@ -49,6 +51,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(pet):
-    sql = "UPDATE pets SET(pet_name, date_of_birth, pet_type, breed, pet_owner, treatment_notes, vet_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.pet_owner, pet.treatment_notes, pet.vet.id, pet.id]
+    sql = "UPDATE pets SET(pet_name, date_of_birth, pet_type, breed, owner_id, treatment_notes, vet_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.owner.id, pet.treatment_notes, pet.vet.id, pet.id]
     run_sql(sql, values)

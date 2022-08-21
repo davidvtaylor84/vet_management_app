@@ -22,9 +22,9 @@ owner_repository.save(owner1)
 owner2 = Owner('Jessica', 'Hellfire', '13 flat 3 Billy Crystal Drive, Livingston, UK', 'ohlord86@cripes.com', '07253 637 737')
 owner_repository.save(owner2)
 
-pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', 'Henry', 'Bit of a sore leg', vet3)
+pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', owner1, 'Bit of a sore leg', vet3)
 pet_repository.save(pet1)
-pet2 = Pet('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', 'Billy', 'Listless and depressed', vet2)
+pet2 = Pet('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', owner2, 'Listless and depressed', vet2)
 pet_repository.save(pet2)
 
 

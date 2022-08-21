@@ -25,7 +25,7 @@ CREATE TABLE pets (
     date_of_birth VARCHAR(255),
     pet_type VARCHAR(255),
     breed VARCHAR(255),
-    pet_owner VARCHAR(255),
+    owner_id INT REFERENCES owners(id),
     treatment_notes VARCHAR(255),
     vet_id INT REFERENCES vets(id) 
 );
