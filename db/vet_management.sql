@@ -1,4 +1,5 @@
 DROP TABLE pets;
+DROP TABLE owners;
 DROP TABLE vets;
 
 CREATE TABLE vets (
@@ -8,6 +9,15 @@ CREATE TABLE vets (
     email VARCHAR(255),
     phone VARCHAR(255)
 );
+
+-- CREATE TABLE owners (
+--     id SERIAL PRIMARY KEY,
+--     owner_firstname VARCHAR(255),
+--     owner_surname VARCHAR(255),
+--     owner_surname VARCHAR(255),
+--     owner_address VARCHAR(255),
+--     owner_phone VARCHAR(255),
+-- )
 
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,

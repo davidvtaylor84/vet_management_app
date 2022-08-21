@@ -4,6 +4,7 @@ from models.pet import Pet
 from models.vet import Vet
 
 import repositories.vet_repository as vet_repository
+import repositories.owner_repository as owner_repository
 
 def save(pet):
     sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, breed,pet_owner, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s, %s)returning id"
