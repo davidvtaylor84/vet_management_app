@@ -9,7 +9,7 @@
     <p>Date of birth: {{ pet.date_of_birth }}</p>
     <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p> 
     <p>Treatment Notes: {{ pet.treatment_notes }}</p>
-    <a href="{{ pet.id }}/edit">UPDATE DETAILS</a>
+    <p><a href="{{ pet.id }}/edit"><button>Update</button></a></p>
   </div>
 
 {% endblock %}
