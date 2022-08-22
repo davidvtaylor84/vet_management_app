@@ -40,5 +40,5 @@ def delete_all():
 
 def update(owner):
     sql = "UPDATE owners SET(owner_firstname, owner_surname, owner_address, owner_email, owner_phone) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [owner.owner_firstname, owner.owner_surname, owner.owner_address, owner.owner_email, owner.owner_phone]
+    values = [owner.owner_firstname, owner.owner_surname, owner.owner_address, owner.owner_email, owner.owner_phone, owner.id]
     run_sql(sql, values)
