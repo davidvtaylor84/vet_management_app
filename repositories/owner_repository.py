@@ -61,3 +61,8 @@ def owns_which_pets(id):
         pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['breed'], owner, result['treatment_notes'], vet, result['id'])
         pets.append(pet)
     return pets
+
+def delete(id):
+    sql = "DELETE FROM owners WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

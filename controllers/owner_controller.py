@@ -44,3 +44,7 @@ def create_new_owner():
     owner_repository.save(owner)
     return redirect('/pets')
 
+@owners_blueprint.route("/owners/<id>/delete", methods = ['POST'])
+def delete_owner(id):
+    owner_repository.delete(id)
+    return redirect('/pets')

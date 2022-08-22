@@ -30,7 +30,7 @@ owner_repository.save(owner5)
 owner6 = Owner('Millficent', 'Helpmekill', '73 Great Walls of Fire, Edinburgh, EH6 76Y', 'ilostmyshoes@goalpost.com', '08877 637 736')
 owner_repository.save(owner6)
 
-pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', owner1, '21/01/2022: Bit of a sore leg and, to be honest, his hair is going. He lost his car during a trip to Torquay and was attacked by a flock of seagulls who ate the contents of his handbag. A touch time overrall', vet3)
+pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', owner1, '21/01/2022: Bit of a sore leg and, to be honest, his hair is going. He lost his car during a trip to Torquay and was attacked by a flock of seagulls who ate the contents of his handbag. A tough time overrall', vet3)
 pet_repository.save(pet1)
 pet2 = Pet('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', owner2, '15/03/2022: Listless and depressed. Cannot get up in the morning. His tongue is furred. Too much cream in the diet. And also let me tell you about the time he saw Boris Johnson in an air balloon.', vet2)
 pet_repository.save(pet2)

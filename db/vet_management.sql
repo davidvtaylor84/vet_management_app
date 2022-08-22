@@ -25,7 +25,7 @@ CREATE TABLE pets (
     date_of_birth VARCHAR(255),
     pet_type VARCHAR(255),
     breed VARCHAR(255),
-    owner_id INT REFERENCES owners(id),
+    owner_id INT REFERENCES owners(id) ON DELETE CASCADE,
     treatment_notes TEXT,
     vet_id INT REFERENCES vets(id) 
 );
