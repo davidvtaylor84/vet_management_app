@@ -57,7 +57,7 @@ def update(pet):
 
 def pets_search_by_pet_name(almost_name):
     pets_list = []
-    sql = "SELECT * FROM pets WHERE pet_name LIKE %s"
+    sql = "SELECT * FROM pets WHERE lower(pet_name) LIKE %s"
     values = ['%'+almost_name+'%']
     results = run_sql(sql, values)
     for row in results:
