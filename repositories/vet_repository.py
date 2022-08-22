@@ -38,3 +38,8 @@ def select(id):
 def delete_all():
     sql = "DELETE  FROM vets"
     run_sql(sql)
+
+
+# def check_in_pets(customer):
+#         self.guests_in_room.append(customer)
+#         return self.guests_in_room

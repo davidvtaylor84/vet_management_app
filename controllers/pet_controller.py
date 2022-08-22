@@ -14,6 +14,12 @@ def pets():
     pets_list = pet_repository.select_all()
     return render_template("pets/index.html", pets = pets_list)
 
+@pets_blueprint.route('/pets', methods = ['POST'])
+def pet_search():
+    almost_name = request.form['almost_name']
+    pets_list = pet_repository.pets_search_by_pet_name(almost_name)
+    return render_template("pets/index.html", pets = pets_list)
+
 @pets_blueprint.route("/pets/<id>", methods = ['GET'])
 def get_pet(id):
     pet = pet_repository.select(id)
@@ -67,6 +73,15 @@ def create_new_pet():
 def delete_pet(id):
     pet_repository.delete(id)
     return redirect('/pets')
+
+# @pets_blueprint.route("/pets/<id>", methods =['POST'])
+# def check_in(id):
+#     checked_in = request.form['checked_in']
+#     checked_out = request.form['checked_out']
+#     if checked_in == True:
+#         pet_repository.select(id)
+
+#     return
 
 
 

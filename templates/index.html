@@ -12,6 +12,11 @@
 </head>
 <body>
     <h1>Pardon the Interrufftion Veterinary Practice</h1>
+    {% for vet in vets %}
+    <li>
+        <p>{{ vet.firstname}} {{vet.surname}}: </p>
+    </li>
+    {% endfor %}
 </body>
 </html>
 

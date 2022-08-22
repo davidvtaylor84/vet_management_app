@@ -54,3 +54,17 @@ def update(pet):
     sql = "UPDATE pets SET(pet_name, date_of_birth, pet_type, breed, owner_id, treatment_notes, vet_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.breed, pet.owner.id, pet.treatment_notes, pet.vet.id, pet.id]
     run_sql(sql, values)
+
+def pets_search_by_pet_name(almost_name):
+    pets_list = []
+    sql = "SELECT * FROM pets WHERE pet_name LIKE %s"
+    values = ['%'+almost_name+'%']
+    results = run_sql(sql, values)
+    for row in results:
+        owner = owner_repository.select(row['owner_id'])
+        vet = vet_repository.select(row['vet_id'])
+        pet = Pet(row['pet_name'], row['date_of_birth'], row['pet_type'], row['breed'], owner, row['treatment_notes'], vet, row['id'])
+        pets_list.append(pet)
+    return pets_list
+
+

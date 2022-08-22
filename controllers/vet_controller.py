@@ -12,3 +12,4 @@ vets_blueprint = Blueprint("vets", __name__)
 def vets():
     vets = vet_repository.select_all()
     return render_template("vets/index.html", vets = vets)
+

@@ -12,11 +12,23 @@
 </head>
 <body>
     <h1>Pets and Treatment Notes</h1>
+    <form action="/pets" method = "post">
+    <div>
+        <input type="text" name = "almost_name" id ="almost_name" placeholder="Search..">
+        <button type="submit" value = "submit">Submit</button>
+      </div>
+    </form>
     {% for pet in pets %}
     <li>
         <p>Patient Name: {{pet.pet_name}} <a href="/pets/{{pet.id}}"><button>Treatment Notes</button></a></p>
         <p>Owner: {{pet.owner.owner_firstname}} {{pet.owner.owner_surname}} <a href="/owners/{{pet.owner.id}}"><button>Contact Details</button></a></p>
         <p>Type: {{ pet.pet_type }}</p>
+        <!-- <form action="/pets">
+          <input type="radio" id="check_in" name="checked" value="HTML">
+          <label for="html">Check In</label><br>
+          <input type="radio" id="check_out" name="checked" value="CSS">
+          <label for="check_out">Check Out</label><br><br>
+          <input type="submit" value="Submit"> -->
     </li><br><br>
     {% endfor %}
 </body>
