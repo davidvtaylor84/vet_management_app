@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Client Edit Form</h1>
+
+<form action="/owners/{{owner.id}}" method="post">
+
+    <div>
+        <label for="owner_firstname">First Name:</label>
+        <input type="text" name = owner_firstname value = "{{owner.owner_firstname}}" id = "owner_firstname"> 
+        <br><br>
+    </div>
+
+    <div>
+        <label for="owner_surname">Surname(s):</label>
+        <input type="text" name = owner_surname value = "{{owner.owner_surname}}" id = owner_surname>
+        <br><br>
+    </div>    
+
+    <div>
+        <label for="owner_address">Address:</label>
+        <input type="text" name=owner_address value = "{{owner.owner_address}}" id = owner_address>
+        <br><br>
+    </div>
+
+    <div>
+        <label for="owner_email">Phone:</label>
+        <input type="text" name = owner_email value = "{{owner.owner_email}}" id = owner_email> 
+        <br><br>
+    </div>
+
+    <div>
+        <label for="owner_phone">email:</label>
+        <input type="text" name = owner_phone value = "{{owner.owner_phone}}" id = owner_phone> 
+        <br><br>
+    </div>
+    
+    <button type="submit">Submit</button>
+    <br><br><br>
+</form>
+
+{% endblock %}
