@@ -21,11 +21,25 @@ owner1 = Owner('Jonathan', 'Dinglehoffer', '17 Welshhead Drive, Edinburgh, UK, E
 owner_repository.save(owner1)
 owner2 = Owner('Jessica', 'Hellfire', '13 flat 3 Billy Crystal Drive, Livingston, UK', 'ohlord86@cripes.com', '07253 637 737')
 owner_repository.save(owner2)
+owner3 = Owner('Jimmy', 'The Snitch', '84 Welsh Rabbit Hellscape, Edinburgh, EH6 7HY', 'the_merry_wines_of_mysore@grip.com', '08832 828 828')
+owner_repository.save(owner3)
+owner4 = Owner('Phillipa', 'Sightforsoreeyes', '76/3 Johnny Cash Way, Edinburgh, EH5 7YH', 'where_are_the_beef_sticks@yahoo.co.uk', '637 7276')
+owner_repository.save(owner4)
+owner5 = Owner('Frankenhoffer', 'Alexander', '899 Mansion Willed to the Bone, Edinburgh, EH8 6YH', 'holymenof the east@willis.com', '07788 896 987')
+owner_repository.save(owner5)
+owner6 = Owner('Millficent', 'Helpmekill', '73 Great Walls of Fire, Edinburgh, EH6 76Y', 'ilostmyshoes@goalpost.com', '08877 637 736')
+owner_repository.save(owner6)
 
-pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', owner1, 'Bit of a sore leg', vet3)
+pet1 = Pet('Captain Purrcard', '21/02/2015', 'Cat', 'Persian', owner1, '21/01/2022: Bit of a sore leg and, to be honest, his hair is going. He lost his car during a trip to Torquay and was attacked by a flock of seagulls who ate the contents of his handbag. A touch time overrall', vet3)
 pet_repository.save(pet1)
-pet2 = Pet('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', owner2, 'Listless and depressed', vet2)
+pet2 = Pet('Karl Barx', '02/03/2020', 'Dog', 'Irish Wolfhound', owner2, '15/03/2022: Listless and depressed. Cannot get up in the morning. His tongue is furred. Too much cream in the diet. And also let me tell you about the time he saw Boris Johnson in an air balloon.', vet2)
 pet_repository.save(pet2)
+pet3 = Pet('Margaret Scratcher', '07/09/2017', 'Alien', 'Xenomorph', owner4, '06/04/2022: A bit bitey tbh. He likes to create havok wherever he goes. I caught him on Friday night keying somebodys car. He ate the neighbours dog and threw up in the sink afterwards. May have been food poisoning.', vet1)
+pet_repository.save(pet3)
+pet4 = Pet('Andy Warhowl', '09/08/2014', 'Ape', 'Gorilla', owner4, '07/09/2021: Not seen this guy for a while. He ate a chocolate watch owned by a clown. He attacked him during his stint as a circus clown. His act involved bamboozling people with a cup and ball con trick.', vet2)
+pet_repository.save(pet4)
+pet5 = Pet('Indiana Bones', '08/04/2018', 'Horse', 'Fabulous Horse', owner5, '01/01/2019: He is sad. You could say that he has a long face. Hahaha. Oh boy. I am such a joker. Forget it. He broke his leg and his owner decided he should do some yoga in order to get back into shape. I concurred.', vet1)
+pet_repository.save(pet5)
 
 
 

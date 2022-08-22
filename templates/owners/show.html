@@ -7,6 +7,13 @@
     <p>Phone: {{ owner.owner_phone }}</p>
     <p>e-mail: {{ owner.owner_email }}</p>
     <p><a href="{{ owner.id }}/edit"><button>Update</button></a></p>
+    <br>
+    <p>Registered Pets:</p>
+    {% for pet in pets%}
+        name: {{pet.pet_name}} <br>
+        type: {{pet.pet_type}} <br>
+        breed: {{pet.breed}} <br><br>
+    {% endfor %}
   </div>
 
 {% endblock %}

@@ -10,7 +10,8 @@ owners_blueprint = Blueprint("owners", __name__)
 @owners_blueprint.route("/owners/<id>", methods = ['GET'])
 def get_owner(id):
     owner = owner_repository.select(id)
-    return render_template("/owners/show.html", owner = owner)
+    pets_list = owner_repository.owns_which_pets(id)
+    return render_template("/owners/show.html", owner = owner, pets = pets_list )
 
 @owners_blueprint.route("/owners/<id>/edit", methods = ['GET'])
 def edit_owner(id):
@@ -42,3 +43,4 @@ def create_new_owner():
     owner = Owner(owner_firstname, owner_surname, owner_address, owner_email, owner_phone)
     owner_repository.save(owner)
     return redirect('/pets')
+
