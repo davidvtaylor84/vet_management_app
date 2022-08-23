@@ -1,0 +1,19 @@
+body {
+    margin: 20px;
+    background-image: url(https://www.westend61.de/images/0001430577pw/side-view-of-little-italian-greyhound-dog-in-studio-disguised-on-dark-background-dressed-ina-funny-costume-ADSF07691.jpg);
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    font-family: georgia;
+    font-size: 18px;
+    color: white;
+    };
+
+ul>li { list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    align-items: right;
+    text-align: right;
+
+}
+    
