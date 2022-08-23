@@ -20,9 +20,25 @@ body {
     color: white;
 }
 
+.base {
+    list-style-type: none;
+}
+
 #titlebanner {
     color: blanchedalmond;
     font-size: 40px;
+}
+
+.navigation {
+    display: inline;
+    float: right;
+    list-style-type: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    text-align: right;
+    padding: 20px;
 }
 
 h1 {
@@ -40,6 +56,10 @@ li {
 .homelist {
     font-size: 30px;
     padding: 30px;
+}
+
+.homelist a {
+    text-decoration: none;
 }
 
     

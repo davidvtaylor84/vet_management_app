@@ -4,15 +4,14 @@
     </head>
         <title> {{ title }} - Pardon the Interrufftion</title>
         <link rel="stylesheet" href="/static/vet.css">
-        <body>
+        <body class="base">
             <ul>
+                <li class = "navigation"><a href="/owners/new">Register Client</a></li>
+                <li class = "navigation"><a href="/pets/new">Register Pet</a></li>
+                <li class = "navigation"><a href="/pets">Patient Index</a></li>
+                <li class = "navigation"><a href="/vets">Vet Contact Details</a></li>
                 <li class = "navigation"><a href="/">Home</a></li>
-                <li><a href="/owners/new">Register Client</a></li>
-                <li><a href="/pets/new">Register Pet</a></li>
-                <li><a href="/pets">Patient Index</a></li>
-                <li><a href="/vets">Vet Contact Details</a></li>
             </ul>
-            <hr>
             {% block content %}
 
             {% endblock %}
