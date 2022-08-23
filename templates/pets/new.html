@@ -2,9 +2,9 @@
 
 {% block content %}
 <body>
+<div class="align_form">
+<h1>Register New Pet</h1>
 <p>If owner is not currently registered, please fill in form: <a href="/owners/new"><button>Register Client</button></a></p>
-
-<h1>Register Pet</h1>
 
 <form action="/pets/new" method="post">
     
@@ -15,17 +15,17 @@
       {% endfor %}
     </select><br><br>
 
-    <label for="pet_name">Enter pet name:</label>
-    <input type="text" name = pet_name id = pet_name> <br><br>
+    <label for="pet_name">Enter pet name:</label><br>
+    <input type="text" name = pet_name id = pet_name class="client_input"> <br><br>
 
-    <label for="date_of_birth">Enter date of birth(if known):</label>
-    <input type="text" name = date_of_birth id = date_of_birth> <br><br>
+    <label for="date_of_birth">Enter date of birth(if known):</label><br>
+    <input type="text" name = date_of_birth id = date_of_birth class="client_input"> <br><br>
 
-    <label for="pet_type">Type:</label>
-    <input type="text" name=pet_type id = pet_type> <br><br>
+    <label for="pet_type">Type:</label><br>
+    <input type="text" name=pet_type id = pet_type class="client_input"> <br><br>
     
-    <label for="breed">Breed:</label>
-    <input type="text" name = breed id = breed> <br><br>
+    <label for="breed">Breed:</label><br>
+    <input type="text" name = breed id = breed class="client_input"> <br><br>
 
     <label for="vet_id">Choose Vet:</label>
     <select name="vet_id" id="vet_id">
@@ -35,8 +35,9 @@
     </select><br><br>
   
     <label for="treatment_notes">Treatment Notes</label> <br>
-    <textarea name="treatment_notes" id="treatment_notes" cols="30" rows="10"></textarea>
-    <input class="btn btn--action" type='submit' value="Submit">
+    <textarea name="treatment_notes" id="treatment_notes" cols="30" rows="20" class="client_input"></textarea><br> <br>
+    <input class="btn" type='submit' value="Submit">
 </form>
+</div>
 </body>
 {% endblock %}

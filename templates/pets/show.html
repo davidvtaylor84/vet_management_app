@@ -7,8 +7,9 @@
     <p>Type: {{ pet.pet_type }} 
     <p>Breed: {{ pet.breed }}</p>
     <p>Date of birth: {{ pet.date_of_birth }}</p>
-    <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p> 
-    <p>Treatment Notes: {{ pet.treatment_notes }}</p>
+    <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p> <br>
+    <p>Treatment Notes:</p>
+    <p>{{ pet.treatment_notes }}</p>
     <p><a href="{{ pet.id }}/edit"><button>Update</button></a></p>
   </div>
 
