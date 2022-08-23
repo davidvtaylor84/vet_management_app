@@ -46,7 +46,7 @@ def update_pet(id):
     pet = Pet(pet_name, date_of_birth, pet_type, breed, owner, treatment_notes, vet, id)
     pet_repository.update(pet)
     print (pet)
-    return redirect('/pets')
+    return render_template("/pets/show.html", pet = pet)
 
 @pets_blueprint.route('/pets/new', methods = ['GET'])
 def new_pet():
