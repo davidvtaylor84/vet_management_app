@@ -22,7 +22,6 @@ def select_all():
         vets.append(vet)
     return vets
 
-
 def select(id):
     vet = None
     sql = "SELECT * FROM vets WHERE id = %s"
@@ -34,6 +33,10 @@ def select(id):
         vet = Vet(result['firstname'], result['surname'], result['email'], result['phone'], result['id'])
     return vet
 
+def update(vet):
+    sql = "UPDATE vets SET(firstname, surname, email, phone) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [vet.firstname, vet.surname, vet.email, vet.phone, vet.id]
+    run_sql(sql, values)
 
 def delete_all():
     sql = "DELETE  FROM vets"
