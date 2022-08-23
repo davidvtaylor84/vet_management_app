@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+<!-- {% extends "base.html" %}
 
-{% block content %}
+{% block content %} -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,16 +8,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/static/vet.css">
+    <title>Home</title>
 </head>
-<body>
-    <h1>Pardon the Interrufftion Veterinary Practice</h1>
-    {% for vet in vets %}
-    <li>
-        <p>{{ vet.firstname}} {{vet.surname}}: </p>
-    </li>
-    {% endfor %}
+<body class="homepage">
+    <h1 id="titlebanner">Pardon the Interrufftion Veterinary Practice</h1>
+    <ul>
+        <li class="homelist"><a href="/owners/new">Register Client</a></li>
+        <li class="homelist"><a href="/pets/new">Register Pet</a></li>
+        <li class="homelist"><a href="/pets">Patient Index</a></li>
+        <li class="homelist"><a href="/vets">Vet Contact Details</a></li>
+    </ul>
 </body>
 </html>
 
-{% endblock %}
+<!-- {% endblock %} -->

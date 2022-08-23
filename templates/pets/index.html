@@ -2,20 +2,12 @@
 
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     <h1>Pets and Treatment Notes</h1>
     <form action="/pets" method = "post">
     <div>
-        <input type="text" name = "almost_name" id ="almost_name" placeholder="Search..">
-        <button type="submit" value = "submit">Submit</button>
+        <input type="text" name = "almost_name" id ="almost_name" placeholder="Enter pet name...">
+        <button type="submit" value = "submit">Search</button>
       </div>
     </form>
     {% for pet in pets %}
@@ -32,8 +24,10 @@
     </li><br><br>
     {% endfor %}
 </body>
-</html>
 
-{% endblock %}
+
+
 
 <a href="/owners/new"><button>Register Client</button></a>
+
+{% endblock %}
