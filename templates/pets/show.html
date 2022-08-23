@@ -1,5 +1,9 @@
+
+
 {% extends "base.html" %}
 {% block content %}
+<div class="one_pet">
+    
 
   <div>
     <p>Name: {{ pet.pet_name }}</p>
@@ -8,10 +12,17 @@
     <p>Breed: {{ pet.breed }}</p>
     <p>Date of birth: {{ pet.date_of_birth }}</p>
     <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p> <br>
-    <p>Treatment Notes:</p>
-    <p>{{ pet.treatment_notes }}</p>
-    <p><a href="{{ pet.id }}/edit"><button>Update</button></a></p>
+    <div class="treatment_notes"><p>Treatment Notes:</p>
+        <!-- <p id="box">{{ pet.treatment_notes }}</p> -->
+        <textarea cols="90" rows="15" readonly>{{pet.treatment_notes}}</textarea> 
+        <p><a href="{{ pet.id }}/edit"><button>Edit</button></a></p>
+    </div>
   </div>
+</div>
+
+
 
 {% endblock %}
 
+<!-- <label for="treatment_notes">Treatment Notes</label> <br>
+        <textarea name="treatment_notes" value = "{{pet.treatment_notes}}" id = treatment_notes cols="30" rows="10">{{pet.treatment_notes}}</textarea> -->

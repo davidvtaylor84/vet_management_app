@@ -3,12 +3,12 @@
 {% block content %}
 
 <body>
-    <h1>Pets and Treatment Notes</h1>
+    <h1>Search Client Database</h1>
     <form action="/pets" method = "post">
-    <div>
-        <input type="text" name = "almost_name" id ="almost_name" placeholder="Enter pet name...">
+    <div class="searchbar">
+        <input type="text" name = "almost_name" id ="almost_name" placeholder="Enter pet name..." autofocus>
         <button type="submit" value = "submit">Search</button>
-      </div>
+      </div> <br> <br>
     </form>
     {% for pet in pets %}
     <li>
@@ -24,10 +24,5 @@
     </li><br><br>
     {% endfor %}
 </body>
-
-
-
-
-<a href="/owners/new"><button>Register Client</button></a>
 
 {% endblock %}

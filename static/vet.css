@@ -1,3 +1,5 @@
+
+
 body {
     margin: 40px;
     background-image: url(https://www.westend61.de/images/0001430577pw/side-view-of-little-italian-greyhound-dog-in-studio-disguised-on-dark-background-dressed-ina-funny-costume-ADSF07691.jpg);
@@ -22,6 +24,10 @@ body {
 
 .base {
     list-style-type: none;
+}
+
+.base ul li a {
+    color: white;
 }
 
 #titlebanner {
@@ -77,8 +83,59 @@ li {
 }
 
 .btn {
-    margin-left: 30%;
+    margin-left: 32%;
 }
+
+.searchbar input {
+    height: 30px;
+    width: 500px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid goldenrod;
+}
+
+.searchbar button {
+    width: 10%;
+    height: 30px;
+    font-size: 17px;
+    /* border: 1px solid grey;
+    border-left: none; Prevent double borders */
+    cursor: pointer;
+}
+
+/* .one_pet { margin: 40px;
+    background: black;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    font-family: georgia;
+    font-size: 18px;
+    color: white;
+    padding-bottom: 100px;
+} */
+
+.treatment_notes {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.treatment_notes textarea {
+    font-size: 17px;
+    font-family: Georgia;
+}
+
+.treatment_notes p button {
+    width: 10%;
+    height: 30px;
+    border: 2px;
+    color: black;
+    background-color: white;
+}
+
+.delete-form {
+    text-align: center;
+}
+
 
 
 

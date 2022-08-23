@@ -15,10 +15,10 @@
     {% for vet in vets %}
     <li>
         <p>{{ vet.firstname}} {{vet.surname}}</p>
-        <p>Phone: {{vet.phone }}</p>
         <p>email: {{vet.email }}</p>
+        <p>Phone: {{vet.phone }}</p>
         <p><a href="vets/{{ vet.id }}/edit"><button>Update</button></a></p>
-    </li>
+    </li> <br>
     {% endfor %}
 </body>
 </html>
