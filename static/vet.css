@@ -136,6 +136,18 @@ li {
     text-align: center;
 }
 
+/* .select {
+    position: relative;
+    font-family: Georgia;
+    background: transparent;
+} */
+
+select {
+    font-family: georgia;
+    font-size: 15px;
+    width: 200px;
+    height: 25px;
+  }
 
 
 
