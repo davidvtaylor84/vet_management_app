@@ -67,7 +67,7 @@ def create_new_pet():
     vet = vet_repository.select(vet_id)
     pet = Pet(pet_name, date_of_birth, pet_type, breed, owner, treatment_notes, vet)
     pet_repository.save(pet)
-    return redirect('/pets')
+    return render_template('/index.html')
 
 @pets_blueprint.route("/pets/<id>/delete", methods = ['POST'])
 def delete_pet(id):
