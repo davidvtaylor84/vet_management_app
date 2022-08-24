@@ -40,10 +40,12 @@ pet4 = Pet('Andy Warhowl', '09/08/2014', 'Ape', 'Gorilla', owner4, '07/09/2021: 
 pet_repository.save(pet4)
 pet5 = Pet('Indiana Bones', '08/04/2018', 'Horse', 'Fabulous Horse', owner5, '01/01/2019: He is sad. You could say that he has a long face. Hahaha. Oh boy. I am such a joker. Forget it. He broke his leg and his owner decided he should do some yoga in order to get back into shape. I concurred.', vet1)
 pet_repository.save(pet5)
-pet6 = Pet('Sarah Jessica Barker', '01/05/2019', 'Cryptid', 'Sasquatch', owner4, '03/05/2022: What a character! He has terrible breath though. He eats like 15 buckets of fingernails a day. Its the only thing that satisfies him. Also, thirteen times a day he likes to challenge people to an arm wrestle and has a tendency to rip arms off an use them as drumsticks. He likes to play the drums you see. I diagnose a profound insanity borne from years of living in the woods and talking to squirrels who are known for their foul tempers.', vet3)
+pet6 = Pet('Sarah Jessica Barker', '01/05/2019', 'Cryptid', 'Sasquatch', owner3, '03/05/2022: What a character! He has terrible breath though. He eats like 15 buckets of fingernails a day. Its the only thing that satisfies him. Also, thirteen times a day he likes to challenge people to an arm wrestle and has a tendency to rip arms off an use them as drumsticks. He likes to play the drums you see. I diagnose a profound insanity borne from years of living in the woods and talking to squirrels who are known for their foul tempers.', vet3)
 pet_repository.save(pet6)
 pet7 = Pet('Kanye Westie', '08/12/2019', 'Dream Figment', 'Nightmare', owner4, '09/09/2022: Its a tough day in the jail. Many people have asked me where they can find the time to carry on. I have been treating this nightmare creature for the last three weeks and he will not go away.', vet2)
 pet_repository.save(pet7)
+pet8 = Pet('Sherlock Bones', '25/02/2019', 'Cryptid', 'Mothman', owner6, '08/09/2022: Another tough day at the coal face and the Mothman walks into the room. He has a problem with authority. Enjoys jumping out at children and throwing bags of toenail clippings over errant politicians. Why does this always happen to me? He has also been rummaging in my sock drawer looking for fragments of a poem he wrote about the great works of George W Bush. Never figured him for a Republican. What can one do? I heard the Loch Ness Monster was a fan of Theresa May.', vet3)
+pet_repository.save(pet8)
 
 
 
