@@ -57,8 +57,13 @@ def update(pet):
 
 def pets_search_by_pet_name(almost_name):
     pets_list = []
-    sql = "SELECT * FROM pets WHERE lower(pet_name) LIKE %s"
-    values = ['%'+almost_name+'%']
+    # sql = "SELECT * FROM pets WHERE lower(pet_name) LIKE %s"
+    sql = """SELECT pets.* FROM pets 
+        INNER JOIN owners
+        ON owners.id = pets.owner_id
+        WHERE lower(pet_name) LIKE %s 
+        OR lower(owner_surname) LIKE %s"""
+    values = ['%'+almost_name+'%', '%'+almost_name+'%']
     results = run_sql(sql, values)
     for row in results:
         owner = owner_repository.select(row['owner_id'])
