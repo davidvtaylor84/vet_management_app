@@ -5,7 +5,7 @@
 <title>Index</title>
 
 <body>
-    <h1>Search Client Database</h1>
+    <h1>Search Client Database</h1><br>
     <form action="/pets" method = "post">
     <div class="searchbar">
         <input type="text" name = "almost_name" id ="almost_name" placeholder="Enter pet name or client surname..." autofocus>
@@ -14,8 +14,8 @@
     </form>
     {% for pet in pets %}
     <li>
-        <p>Patient Name: {{pet.pet_name}} <a href="/pets/{{pet.id}}"><button>Treatment Notes</button></a></p>
-        <p>Owner: {{pet.owner.owner_firstname}} {{pet.owner.owner_surname}} <a href="/owners/{{pet.owner.id}}"><button>Client Details</button></a></p>
+        <p>Patient Name: {{pet.pet_name}}<a href="/pets/{{pet.id}}">     <button>Treatment Notes</button></a></p>
+        <p>Owner: {{pet.owner.owner_firstname}} {{pet.owner.owner_surname}}<a href="/owners/{{pet.owner.id}}">     <button>Client Details</button></a></p>
         <p>Type: {{ pet.pet_type }}</p>
         <!-- <form action="/pets">
           <input type="radio" id="check_in" name="checked" value="HTML">

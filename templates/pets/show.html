@@ -14,11 +14,11 @@
     <p>Type: {{ pet.pet_type }} 
     <p>Breed: {{ pet.breed }}</p>
     <p>Date of birth: {{ pet.date_of_birth }}</p>
-    <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p> <br>
+    <p>Vet: {{pet.vet.firstname}} {{pet.vet.surname}}</p>
+    <p><a href="{{ pet.id }}/edit"><button class="edit">Edit Notes</button></a></p><br>
     <div class="treatment_notes"><p>Treatment Notes:</p>
         <!-- <p id="box">{{ pet.treatment_notes }}</p> -->
         <textarea cols="90" rows="15" readonly>{{pet.treatment_notes}}</textarea> 
-        <p><a href="{{ pet.id }}/edit"><button>Edit</button></a></p>
     </div>
   </div>
 </div>

@@ -27,7 +27,9 @@ def update_owner(id):
     owner_phone = request.form['owner_phone']
     owner = Owner(owner_firstname, owner_surname, owner_address, owner_email, owner_phone, id)
     owner_repository.update(owner)
-    return redirect('/pets')
+    pets_list = owner_repository.owns_which_pets(id)
+    return render_template("/owners/show.html", owner = owner, pets=pets_list)
+    # return redirect('/pets')
 
 @owners_blueprint.route('/owners/new', methods = ['GET'])
 def new_owner():
@@ -42,7 +44,7 @@ def create_new_owner():
     owner_phone = request.form['owner_phone']
     owner = Owner(owner_firstname, owner_surname, owner_address, owner_email, owner_phone)
     owner_repository.save(owner)
-    return redirect('/pets')
+    return redirect('/pets/new')
 
 @owners_blueprint.route("/owners/<id>/delete", methods = ['POST'])
 def delete_owner(id):
