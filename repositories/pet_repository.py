@@ -16,7 +16,7 @@ def save(pet):
 
 def select_all():
     pets =[]
-    sql = "SELECT * FROM pets"
+    sql = "SELECT * FROM pets ORDER BY pet_name"
     results = run_sql(sql)
 
     for result in results:
@@ -26,6 +26,17 @@ def select_all():
         pets.append(pet)
     return pets
 
+# select an individual pet
+# define pet as None
+# write Sql query - "select all from pets where id is etc"
+# define Values as the pet id in a list
+# write Results as equal to Run_SQl with SQL and Values as values.
+# write if statement - Results
+# result equals results
+# define owner using Select from Owner Repository
+# define vet using Select from Vet Repository
+# define Pet with Result, putting in 'pet_name', date_of_birth etc, as well as defined owner and vet.
+# return pet
 
 def select(id):
     pet = None
@@ -57,7 +68,6 @@ def update(pet):
 
 def pets_search_by_pet_name(almost_name):
     pets_list = []
-    # sql = "SELECT * FROM pets WHERE lower(pet_name) LIKE %s"
     sql = """SELECT pets.* FROM pets 
         INNER JOIN owners
         ON owners.id = pets.owner_id
